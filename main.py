@@ -24,7 +24,8 @@ def formovie(message):
     query = message.text.replace("movie : ","")
     query = query.replace(' ', '+')
     print(query)
-    url1 = 'https://www.tastekid.com/api/similar?q=' + query + '&k=240359-MovieRec-82Y3LRUL&format=json&type=movie'
+    tastekidAPI=" taste kid API"
+    url1 = 'https://www.tastekid.com/api/similar?q=' + query + '&tastekidAPI&format=json&type=movie'
     r = requests.get(url1)
     x=eval(r.text)
     s='\n'.join([i["Name"] for i in x["Similar"]["Results"]])
@@ -35,7 +36,7 @@ def fgokn(message):
     query = message.text.replace("music : ", "")
     query = query.replace(' ', '+')
     print(query)
-    url1 = 'https://www.tastekid.com/api/similar?q=' + query + '&k=240359-MovieRec-82Y3LRUL&format=json&type=music'
+    url1 = 'https://www.tastekid.com/api/similar?q=' + query + '&tastekidAPI&format=json&type=music'
     r = requests.get(url1)
     x = eval(r.text)
     s = '\n'.join([i["Name"] for i in x["Similar"]["Results"]])
@@ -46,7 +47,7 @@ def fgokn(message):
     query = message.text.replace("game : ", "")
     query = query.replace(' ', '+')
     print(query)
-    url1 = 'https://www.tastekid.com/api/similar?q=' + query + '&k=240359-MovieRec-82Y3LRUL&format=json&type=game'
+    url1 = 'https://www.tastekid.com/api/similar?q=' + query + '&tastekidAPI&format=json&type=game'
     r = requests.get(url1)
     x = eval(r.text)
     s = '\n'.join([i["Name"] for i in x["Similar"]["Results"]])
@@ -57,7 +58,7 @@ def fgokn(message):
     query = message.text.replace("book : ", "")
     query = query.replace(' ', '+')
     print(query)
-    url1 = 'https://www.tastekid.com/api/similar?q=' + query + '&k=240359-MovieRec-82Y3LRUL&format=json&type=book'
+    url1 = 'https://www.tastekid.com/api/similar?q=' + query + '&tastekidAPI&format=json&type=book'
     r = requests.get(url1)
     print(r.text)
     x = eval(r.text)
@@ -70,7 +71,7 @@ def fgokn(message):
     query = message.text.replace("author : ", "")
     query = query.replace(' ', '+')
     print(query)
-    url1 = 'https://www.tastekid.com/api/similar?q=' + query + '&k=240359-MovieRec-82Y3LRUL&format=json&type=author'
+    url1 = 'https://www.tastekid.com/api/similar?q=' + query + '&tastekidAPI&format=json&type=author'
     r = requests.get(url1)
     print(r.text)
     x = eval(r.text)
@@ -82,7 +83,7 @@ def fgokn(message):
     query = message.text.replace("shows : ", "")
     query = query.replace(' ', '+')
     print(query)
-    url1 = 'https://www.tastekid.com/api/similar?q=' + query + '&k=240359-MovieRec-82Y3LRUL&format=json&type=shows'
+    url1 = 'https://www.tastekid.com/api/similar?q=' + query + '&tastekidAPI&format=json&type=shows'
     r = requests.get(url1)
     print(r.text)
     x = eval(r.text)
